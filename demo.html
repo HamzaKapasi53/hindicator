@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H-Indicator</title>
+
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/demo.css" />
+
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="icon" type="image/x-icon" href="img/logo.png"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+          <!-- <h2>Complain Connect</h2> -->
+          <img src="./img/Frame 40133.png" alt="" srcset="" />
+        </div>
+
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
+
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="#about" class="nav_menu_link">About</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#services" class="nav_menu_link">Navigation</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">Visitor Policies</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">Visitor Services</a>
+            </li>
+            <li class="nav_menu_item">
+              <style>
+                .nav_menu_item button {
+                  /*border: 2px solid white;*/
+                  padding: 0.5rem 2rem;
+                  border-radius: 10px;
+                  color: white;
+                  border: 1px solid white;
+                  font-weight: bolder;
+                  /*  background-color: #e3651d;*/
+                }
+
+                .nav_menu_item button a {
+                  text-decoration: none;
+                  color: white;
+                  font-size: 16.5px;
+                }
+
+                /* .nav_menu_item button:hover {
+                    background-color: #e3651d;
+                } */
+              </style>
+              <button>
+                <!-- class="nav_menu_link" -->
+                <a href="#">Sign in</a>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <button class="toggle_btn" id="toggle_btn">
+          <style>
+            .ri-menu-line {
+              color: #e3651d;
+            }
+          </style>
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+      <!-- <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div> -->
+    </header>
+    <!-- <hr /> -->
+    <style>
+      .progress-container {
+        width: 100%;
+        position: fixed;
+        height: 8px;
+        background: #242424;
+      }
+
+      .progress-bar {
+        height: 8px;
+        background: #e3651d;
+        width: 0%;
+      }
+    </style>
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+    <style>
+      .herocontainer{
+        width: 100%;
+        height: 89vh;
+        background-color: #e3651d;
+      }
+    </style>
+
+  <div class="herocontainer">
+    <h1>fisukshu</h1>
+    <!-- <h1 class="main-heading"><span>Committed To Your Wellness<br> </span>Dedicated To Your Care</h1>
+    <p class="info-text">
+      Our dedicated team of professionals is committed to providing
+      compassionate and personalized medical services, ensuring your
+      well-being is in expert hands.
+    </p> -->
+  </div>
+
+    <!-- <section class="wrapper">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="grid-cols-3">
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span>Built for developers </span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                ratione facilis animi voluptas exercitationem molestiae.
+              </p>
+            </div>
+          </div>
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span>Designed to be modern</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                ipsum esse corrupti. Quo, labore debitis!
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span>Documentation for everything</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                nostrum voluptate totam ipsa corrupti vero!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <style>
+      .aboutcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        /* background-color: #f5f5f5;*/
+      }
+
+      .aboutleft {
+        width: 50%;
+        height: 100%;
+        /* background-color: #e3651d;*/
+        display: flex;
+      }
+      .aboutleft h1 {
+        margin: auto;
+        font-size: 15vh;
+        font-family: "kajiro";
+        font-weight: 300;
+      }
+      .aboutright {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        /*   background-color: #f5f5f5;*/
+      }
+      .aboutright p {
+        margin: auto;
+        font-size: 5vh;
+      }
+      @media screen and (max-width: 991px) {
+        .aboutcontainer {
+          flex-direction: column;
+        }
+        .aboutleft {
+          width: 100%;
+          height: 50%;
+        }
+        .aboutright {
+          width: 100%;
+          height: 50%;
+        }
+      }
+    </style>
+    <section >
+      <div class="aboutcontainer" id="about">
+        <div class="aboutleft" >
+          <!-- <img src="img/Shapes.png" style="position: absolute; width: 60%" /> -->
+          <h1>
+            Who <br />We <br />
+            Are ?
+          </h1>
+          <!-- <img
+            src="img/Wave.svg"
+            style="position: absolute; margin: 200px 0 0 500px"
+            alt=""
+          /> -->
+        </div>
+        <div >
+          <!-- <img
+            src="img/Shapes (1).png"
+            style="position: absolute; margin-top: 50px"
+            alt=""
+          /> -->
+          <p>
+            Complain Connect specializes in managing complaint portals for
+            societies. Our business revolves around providing a platform where
+            residents can submit complaints related to various issues within
+            their society, such as maintenance, security, or facilities.
+          </p>
+        </div>
+      </div>
+      <style>
+        .servicecontainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          width: 100%;
+          background-color: #7a85ff;
+        }
+
+        .serviceright {
+          width: 50%;
+          height: 100%;
+          /* background-color: #e3651d;*/
+          display: flex;
+        }
+        .serviceright h1 {
+          margin: auto;
+          font-size: 15vh;
+          font-family: "kajiro";
+          font-weight: 300;
+        }
+        .serviceleft {
+          display: flex;
+          width: 50%;
+          height: 100%;
+          /*   background-color: #f5f5f5;*/
+        }
+        .serviceleft p {
+          margin: auto;
+          font-size: 5vh;
+        }
+        @media screen and (max-width: 991px) {
+          .servicecontainer {
+            flex-direction: column;
+          }
+          .serviceright {
+            width: 100%;
+            height: 50%;
+          }
+          .serviceleft {
+            width: 100%;
+            height: 50%;
+          }
+        }
+      </style>
+    
+    </section>
+
+    <footer></footer>
+    <script>
+      var words = [
+          "Complain Connect:  Where Issues\xa0\xa0 Find Resolution.",
+          "Empowering Residents, Elevating Communities.",
+          "From Frustration to Resolution: Your Pathway to Peace.",
+          /* " consectetur adipiscing elit",
+          "sed do eiusmod tempor incididunt",*/
+        ],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = true,
+        skip_count = 0,
+        skip_delay = 15,
+        speed = 70;
+      var wordflick = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".word").text(part);
+        }, speed);
+      };
+
+      $(document).ready(function () {
+        //wordflick();
+        setTimeout(wordflick, 2900);
+      });
+    </script>
+
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./demo.js" defer></script>
+  </body>
+</html>

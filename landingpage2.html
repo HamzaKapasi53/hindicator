@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
+
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/landingpage2.css" />
+
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+          <!-- <h2>Devkit.</h2> -->
+          <img src="./img/Frame 40133.png" alt="" />
+        </div>
+
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
+
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">about</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#navigation" class="nav_menu_link">navigation</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">visitor policies</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">visitor services</a>
+            </li>
+            <li class="nav_menu_item">
+              <style>
+                .nav_menu_item button {
+                  background-color: #235464;
+                  border: 1px solid white;
+                  padding: 5px 50px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+                @media screen and (max-width:1150px) and (min-width:769px){
+                   .nav_menu_list .nav_menu_item{
+                      margin: 0 1rem;
+                    }
+                }
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    .nav_menu_item .nav_menu_link {
+                        font-size: 10px;
+                        line-height: 0px;
+                        
+                    }
+                    
+                }
+              
+              </style>
+              <button>
+                <a href="#" class="nav_menu_link">Sign In</a>
+              </button>
+              <!-- <a href="#" class="nav_menu_link">visitor services</a> -->
+            </li>
+          </ul>
+        </div>
+
+        <button class="toggle_btn" id="toggle_btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+<style>
+ 
+
+    #mainpage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*text-align: center;*/
+        color: white;
+       /* background-color: #0b222c;*/
+        height: auto;
+    }
+
+    .heading {
+        font-size: 45px;
+        font-weight: bolder;
+        max-width: 500px;
+        margin: 50px 0 0 50px;
+    }
+
+    .heading span {
+        font-weight: bolder;
+
+        color: #ff22fe;
+    }
+
+    .content {
+     /*   padding: 20px;*/
+       /* max-width: 1000px; *//* Added max-width to control content width */
+    }
+
+    .text {
+        font-size: 18px;
+        max-width: 500px;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+    
+    .content button {
+        margin-left: 50px;
+background-color: white;
+        color: #ff22fe;
+font-size: 20px;
+        padding: 10px 50px;
+        border-radius: 5px;
+       
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        #mainpage {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .content {
+          /*  padding: 100px;*/
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .content {
+            /*padding: 2
+            0px;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .content .heading,.content .text {
+            margin-left: 0;
+       
+        }
+        .content button{
+          margin-left: 0;
+        }
+        .content .heading{
+          font-size: 42px;
+        }
+        .content .text{
+          width: 100%;
+        }
+        
+    }
+</style>
+  <div id="mainpage">
+    <div class="content">
+        
+            <h1 class="heading">
+            <span> Committed To Your<br> Wellness</span><br />
+            Dedicated To Your<br> Care
+            </h1>
+            <div class="text">
+            Our dedicated team of professionals is committed to providing
+            compassionate and personalized medical services, ensuring your
+            well-being is in expert hands.
+            </div>
+            <div style="width: auto;">
+              <button>Explore</button>
+
+            </div>
+
+            <style>
+                .col-lg-8 {
+                  
+                
+                }
+              </style>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+        
+              <div class="col-lg-8" id="animation-container">
+                <script>
+                  var animation = bodymovin.loadAnimation({
+                    container: document.getElementById("animation-container"),
+                    path: "ambulance.json",
+                    render: "svg",
+                    loop: true,
+                    autoplay: true,
+                    // name: 'demo-animation'
+                  });
+                </script>
+              </div>
+
+
+   
+    </div>
+  </div>
+  
+    <style>
+        #navigation {
+            display: flex;
+            justify-content: space-between;
+         
+            align-items: center;
+            background-color: #235464;
+            color: white;
+            height: 100vh; /* Set height to cover the full viewport height */
+            width: 100%;
+        }
+
+        #navigationleft {
+            width: 50%;
+            padding: 50px 20px; /* Adjusted padding for smaller screens */
+        }
+
+        #navigationleft h1 {
+            font-size: 4vw; /* Changed font size to be responsive */
+            color: #ff22fe;
+            margin-bottom: 20px; /* Added margin bottom for better spacing */
+        }
+
+        #navigationleft div {
+            font-size: 2vw; /* Changed font size to be responsive */
+        }
+
+        #navigationright {
+            width: 50%;
+        }
+
+        #navigationright img {
+            width: 100%;
+            height: auto; /* Ensure image responsiveness */
+        }
+
+        @media screen and (max-width: 991px) {
+            #navigation {
+                flex-direction: column;
+                height: auto; /* Reset height for smaller screens */
+            }
+
+            #navigationleft, #navigationright {
+                width: 100%;
+                padding: 20px; /* Adjusted padding for smaller screens */
+            }
+
+            #navigationright {
+                order: -1; /* Move image to the top for better mobile layout */
+            }
+
+            #navigationleft h1 {
+                font-size: 6vw; /* Adjusted font size for smaller screens */
+                text-align: center;
+            }
+
+            #navigationleft div {
+                font-size: 3vw; /* Adjusted font size for smaller screens */
+            }
+        }
+   </style>
+   <div id="navigation">
+    <div id="navigationleft">
+        <h1>Navigation</h1>
+
+        <div>
+            Explore our website effortlessly with intuitive navigation designed to
+            provide a user-friendly journey. From finding medical services to
+            booking appointments, our streamlined functionality ensures easy
+            access to essential information, making your online experience
+            seamless and efficient.
+        </div>
+    </div>
+    <div id="navigationright">
+        <img src="./img/Example.png" alt="Example" />
+    </div>
+</div>
+
+    
+<style>
+    #services  {
+      display: flex;
+      flex-direction: column;
+  ;
+  margin-top: 50px;
+
+      justify-content:flex-start;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      /*background-color: #31ccff;*/
+      color: white;
+    }
+    #services h1 {
+      font-size: 50px;
+      color: #ff22fe;
+      
+    }
+    #services_info {
+      display: flex;
+
+     flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      width: 90%;
+      background-color: #0b222c;
+    }
+    /*#innerservices {
+    
+     /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+      background-color: green;
+    margin: 0 50px;
+      border-radius: 10px;
+
+      flex: 0 0 calc(20% - 20px); /* Set width for each card 
+  height: 150px; /* Set height as needed 
+  margin: 10px; /* Adjust margin as needed 
+  background-color: green;
+  border-radius: 10px;
+    }*/
+     /* Media query for smaller screen sizes */
+/*@media screen and (max-width: 768px) {
+  #innerservices {
+    flex-basis: calc(50% - 20px); /* Two cards per row on smaller screens 
+  }
+}
+*/
+
+#innerservices {
+ /* 33.33%*/
+  flex: 0 0 calc(20% - 20px); /* Set width for each card */
+  height: 150px; /* Set height as needed */
+  margin: 10px; /* Adjust margin as needed */
+ /* background-color: green;*/
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  #innerservices {
+    flex-basis: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+/* Media query for even smaller screen sizes */
+@media screen and (max-width: 576px) {
+  #innerservices {
+    flex-basis: calc(100% - 20px); /* One card per row */
+  }
+}
+  </style>
+  <div id="services">
+    <h1 >Our Services</h1>
+
+    <div id="services_info">
+     <!-- <div id="innerservices"></div> -->
+     <div id="innerservices"><img src="./img/Calendar.png" alt=""></div>
+     <div id="innerservices"><img src="./img/Dentistrs.png" alt=""></div>
+     <div id="innerservices"><img src="./img/Otology.png" alt=""></div>
+     <div id="innerservices"><img src="./img/optimology.png" alt=""></div>
+     <div id="innerservices"><img src="./img/map.png" alt=""></div>
+     <!-- <div id="innerservices"></div> -->
+
+    </div>
+  </div>
+  <style>
+    #availabletests  {
+      display: flex;
+      flex-direction: column;
+  ;
+  margin-top: 50px;
+
+      justify-content:flex-start;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      /*background-color: #31ccff;*/
+      color: white;
+    }
+    #availabletests h1 {
+      font-size: 50px;
+      color: #ff22fe;
+      
+    }
+    #availabletests_info {
+      display: flex;
+
+     flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      width: 90%;
+      background-color: #0b222c;
+    }
+    /*#innerservices {
+    
+     /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+      background-color: green;
+    margin: 0 50px;
+      border-radius: 10px;
+
+      flex: 0 0 calc(20% - 20px); /* Set width for each card 
+  height: 150px; /* Set height as needed 
+  margin: 10px; /* Adjust margin as needed 
+  background-color: green;
+  border-radius: 10px;
+    }*/
+     /* Media query for smaller screen sizes */
+/*@media screen and (max-width: 768px) {
+  #innerservices {
+    flex-basis: calc(50% - 20px); /* Two cards per row on smaller screens 
+  }
+}
+*/
+
+#inneravailabletests {
+ /* 33.33%*/
+  flex: 0 0 calc(25% - 20px); /* Set width for each card */
+  height: 150px; /* Set height as needed */
+  margin: 10px; /* Adjust margin as needed */
+  background-color: #414141;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  #inneravailabletests {
+    flex-basis: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+/* Media query for even smaller screen sizes */
+@media screen and (max-width: 576px) {
+  #inneravailabletests {
+    flex-basis: calc(100% - 20px); /* One card per row */
+  }
+}
+  </style>
+  <div id="availabletests">
+    <h1 >Available Test</h1>
+
+    <div id="availabletests_info">
+     <!-- <div id="innerservices"></div> -->
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <!-- <div id="innerservices"></div> -->
+
+    </div>
+  </div>
+  <style>
+    #getintouch  {
+      display: flex;
+      flex-direction: column;
+  ;
+  margin-top: 50px;
+
+      justify-content:flex-start;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      /*background-color: #31ccff;*/
+      color: white;
+    }
+    #getintouch h1 {
+      font-size: 50px;
+      color: #ff22fe;
+      
+    }
+    #getintouch_info {
+      display: flex;
+
+     flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      width: 90%;
+      background-color: #0b222c;
+    }
+    /*#innerservices {
+    
+     /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+      background-color: green;
+    margin: 0 50px;
+      border-radius: 10px;
+
+      flex: 0 0 calc(20% - 20px); /* Set width for each card 
+  height: 150px; /* Set height as needed 
+  margin: 10px; /* Adjust margin as needed 
+  background-color: green;
+  border-radius: 10px;
+    }*/
+     /* Media query for smaller screen sizes */
+/*@media screen and (max-width: 768px) {
+  #innerservices {
+    flex-basis: calc(50% - 20px); /* Two cards per row on smaller screens 
+  }
+}
+*/
+
+#innergetintouch {
+ /* 33.33%*/
+  flex: 0 0 calc(25% - 20px); /* Set width for each card */
+  height: 250px; /* Set height as needed */
+  margin: 10px; /* Adjust margin as needed */
+  background-color: #bfd2f8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  #innergetintouch {
+    flex-basis: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+/* Media query for even smaller screen sizes */
+@media screen and (max-width: 576px) {
+  #innergetintouch {
+    flex-basis: calc(100% - 20px); /* One card per row */
+  }
+}
+  </style>
+  <div id="getintouch">
+    <h1 >Get In Touch</h1>
+
+    <div id="availabletests_info">
+     <!-- <div id="innerservices"></div> -->
+     <div id="innergetintouch"><img src="./img/Group 77.png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
+     <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
+     <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
+     <!-- <div id="innerservices"></div> -->
+
+    </div>
+  </div>
+    <!-- <footer></footer> -->
+
+    <style>
+      .footer {
+        margin-top: 50px;
+
+        /*max-width: 1280px;*/
+        width: 100%;
+        background: #ff22fe;
+        border-radius: 6px;
+      }
+      .footer .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3.5rem;
+        padding: 60px;
+      }
+      .footer-row .footer-col h4 {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      .footer-col .links {
+        margin-top: 20px;
+      }
+      .footer-col .links li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      .footer-col .links li a {
+        text-decoration: none;
+        color: #ffff;
+      }
+      .footer-col .links li a:hover {
+        color: #fff;
+      }
+      .footer-col p {
+        margin: 20px 0;
+        color: #fff;
+        max-width: 300px;
+      }
+      .footer-col form {
+        display: flex;
+        gap: 5px;
+      }
+      .footer-col input {
+        height: 40px;
+        border-radius: 6px;
+        background: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid #7489c6;
+        caret-color: #fff;
+        color: #fff;
+        padding-left: 10px;
+      }
+      .footer-col input::placeholder {
+        color: #ccc;
+      }
+      .footer-col form button {
+        background: #fff;
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s ease;
+      }
+      .footer-col form button:hover {
+        background: #cecccc;
+      }
+      .footer-col .icons {
+        display: flex;
+        margin-top: 30px;
+        gap: 30px;
+        cursor: pointer;
+      }
+      .footer-col .icons i {
+        color: #afb6c7;
+      }
+      .footer-col .icons i:hover {
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        .footer {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          transform: none;
+          width: 100%;
+          border-radius: 0;
+        }
+        .footer .footer-row {
+          padding: 20px;
+          gap: 1rem;
+        }
+        .footer-col form {
+          display: block;
+        }
+        .footer-col form :where(input, button) {
+          width: 100%;
+        }
+        .footer-col form button {
+          margin: 10px 0 0 0;
+        }
+      }
+    </style>
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <!-- <h4>Info</h4> -->
+          <img src="./img/Frame 40133.png" alt="" />
+          <ul class="links">
+            <p>Leading the Way in Medical Execellence, Trusted Care.</p>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Important Links</h4>
+          <ul class="links">
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <!-- <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose of news, updates,
+            helpful tips, and exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./landingpage.js" defer></script>
+  </body>
+</html>

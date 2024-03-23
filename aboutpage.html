@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
+
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/landingpage2.css" />
+
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+          <!-- <h2>Devkit.</h2> -->
+          <img src="./img/Frame 40133.png" alt="" />
+        </div>
+
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
+
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">about</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#navigation" class="nav_menu_link">navigation</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">visitor policies</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">visitor services</a>
+            </li>
+            <li class="nav_menu_item">
+              <style>
+                .nav_menu_item button {
+                  background-color: #235464;
+                  border: 1px solid white;
+                  padding: 5px 50px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+                @media screen and (max-width:1150px) and (min-width:769px){
+                   .nav_menu_list .nav_menu_item{
+                      margin: 0 1rem;
+                    }
+                }
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    .nav_menu_item .nav_menu_link {
+                        font-size: 10px;
+                        line-height: 0px;
+                        
+                    }
+                    
+                }
+              
+              </style>
+              <button>
+                <a href="#" class="nav_menu_link">Sign In</a>
+              </button>
+              <!-- <a href="#" class="nav_menu_link">visitor services</a> -->
+            </li>
+          </ul>
+        </div>
+
+        <button class="toggle_btn" id="toggle_btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+    <style>
+        #aboutmain {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #235464;
+        }
+        #aboutmainleft {
+          width: 50%;
+          height: 100vh;
+  
+          display: flex;
+          justify-content: center;
+          align-items: left;
+          flex-direction: column;
+          padding: 20px;
+        }
+        #aboutmainright {
+          width: 50%;
+          height: 100vh;
+  
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+        @media screen and (max-width: 768px) {
+          #aboutmain {
+            display: block;
+          }
+          #aboutmainleft {
+            width: 100%;
+  
+            /* background-color: #000;*/
+          }
+          #aboutmainright {
+            width: 100%;
+            height: auto;
+  
+            /*background-color: #ff22fe;*/
+          }
+        }
+        #aboutmainleft h1 {
+          font-size: 3rem;
+          color: #ff22fe;
+        }
+        #aboutmainleft h3 {
+          font-size: 2rem;
+          color: white;
+        }
+        #aboutmainleft p {
+          font-size: 1.5rem;
+          color: white;
+          margin-top: 30px;
+        }
+        #aboutmainleft ul {
+          font-size: 1.5rem;
+          padding: 20px;
+        }
+  
+        #aboutmainleft ul li {
+          list-style: circle;
+          color: #0386ff;
+        }
+        #aboutmainleft ul li a {
+          color: #0386ff;
+        }
+      </style>
+      <div id="aboutmain">
+        <div id="aboutmainleft">
+          <h1>About Us</h1>
+          <h3>Welcome to H-indicator</h3>
+          <p>
+            Navigating your healthcare journey is made easy by H-indicator.
+            Whether you're a patient, visitor, or family member, our website is
+            your comprehensive guide to the hospital premises, appointments,
+            tests, and general information.
+          </p>
+          <ul>
+            <li><a href="">Navigation</a></li>
+            <li><a href="">Visitor policies</a></li>
+            <li><a href="">Visitor guide</a></li>
+            <li><a href="">Book appointment</a></li>
+          </ul>
+        </div>
+        <div id="aboutmainright">
+          <img src="./img/about us pic.png" alt=""  />
+        </div>
+      </div>
+      <style>
+        #aboutinfo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* background-color: #ff22fe;*/
+          padding: 20px;
+          flex-direction: column;
+        }
+        #findway {
+          width: 90%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: left;
+          padding: 20px;
+          border: 2px solid #ff22fe;
+          flex-direction: column;
+          background-color: #0b222c;
+          margin-top: 30px;
+        }
+        #findway h1 {
+          font-size: 34px;
+          color: #ff22fe;
+        }
+        #findway p {
+          font-size: 1.5rem;
+          color: #ffff;
+          margin-top: 30px;
+        }
+      </style>
+  
+      <div id="aboutinfo">
+        <div id="findway">
+          <h1>Find Your Way Around</h1>
+          <p>
+            Easily locate various Outpatient Departments (OPDs) and test centers,
+            etc with detailed maps and directions on our website. We want your
+            journey within the hospital to be seamless.
+          </p>
+        </div>
+        <div id="findway">
+          <h1>Appointment Booking</h1>
+          <p>
+            Save time by booking appointments online through our user-friendly
+            portal. Select your preferred date and time for consultations and
+            tests.
+          </p>
+        </div>
+        <div id="findway">
+          <h1>Patient and Visitor Resources</h1>
+          <p>
+            <span style="font-weight: bolder">Visitor Services:</span>Learn about
+            services dedicated to making your visit comfortable, including
+            accommodation options, parking details, and more. <br />
+            <span style="font-weight: bolder">Visitor Policies:</span>Our visitor
+            policies are crafted to ensure a supportive environment, respecting
+            patient privacy and fostering healing companionship. Adhering to these
+            policies contributes to uninterrupted patient care, minimizes
+            disruptions, and actively promotes safety measures for a comfortable
+            and secure experience. Your role as a visitor is vital, creating a
+            positive impact on patient well-being and the overall healing
+            atmosphere at our hospital.
+          </p>
+        </div>
+        <div id="findway">
+          <h1>Your Feedback Matters:</h1>
+          <p>
+            Your input is invaluable in enhancing our website experience. Share
+            your thoughts to help us refine our platform, ensuring it caters to
+            your needs seamlessly. Together, we can create an informative and
+            user-friendly space tailored to serve you better.
+          </p>
+        </div>
+      </div>
+
+    <!-- <footer></footer> -->
+
+    <style>
+      .footer {
+        margin-top: 50px;
+
+        /*max-width: 1280px;*/
+        width: 100%;
+        background: #ff22fe;
+        border-radius: 6px;
+      }
+      .footer .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3.5rem;
+        padding: 60px;
+      }
+      .footer-row .footer-col h4 {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      .footer-col .links {
+        margin-top: 20px;
+      }
+      .footer-col .links li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      .footer-col .links li a {
+        text-decoration: none;
+        color: #ffff;
+      }
+      .footer-col .links li a:hover {
+        color: #fff;
+      }
+      .footer-col p {
+        margin: 20px 0;
+        color: #fff;
+        max-width: 300px;
+      }
+      .footer-col form {
+        display: flex;
+        gap: 5px;
+      }
+      .footer-col input {
+        height: 40px;
+        border-radius: 6px;
+        background: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid #7489c6;
+        caret-color: #fff;
+        color: #fff;
+        padding-left: 10px;
+      }
+      .footer-col input::placeholder {
+        color: #ccc;
+      }
+      .footer-col form button {
+        background: #fff;
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s ease;
+      }
+      .footer-col form button:hover {
+        background: #cecccc;
+      }
+      .footer-col .icons {
+        display: flex;
+        margin-top: 30px;
+        gap: 30px;
+        cursor: pointer;
+      }
+      .footer-col .icons i {
+        color: #afb6c7;
+      }
+      .footer-col .icons i:hover {
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        .footer {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          transform: none;
+          width: 100%;
+          border-radius: 0;
+        }
+        .footer .footer-row {
+          padding: 20px;
+          gap: 1rem;
+        }
+        .footer-col form {
+          display: block;
+        }
+        .footer-col form :where(input, button) {
+          width: 100%;
+        }
+        .footer-col form button {
+          margin: 10px 0 0 0;
+        }
+      }
+    </style>
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <!-- <h4>Info</h4> -->
+          <img src="./img/Frame 40133.png" alt="" />
+          <ul class="links">
+            <p>Leading the Way in Medical Execellence, Trusted Care.</p>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Important Links</h4>
+          <ul class="links">
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <!-- <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose of news, updates,
+            helpful tips, and exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./landingpage.js" defer></script>
+  </body>
+</html>

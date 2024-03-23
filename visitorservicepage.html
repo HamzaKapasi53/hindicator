@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
+
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/landingpage2.css" />
+
+    <!-- ====  REMIXICON CDN ==== -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+        <!-- ==== NAVBAR ==== -->
+        <nav class="nav">
+            <div class="logo">
+                <!-- <h2>Devkit.</h2> -->
+                <img src="./img/Frame 40133.png" alt="" />
+            </div>
+
+            <div class="nav_menu" id="nav_menu">
+                <button class="close_btn" id="close_btn">
+                    <i class="ri-close-fill"></i>
+                </button>
+
+                <ul class="nav_menu_list">
+                    <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">about</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="#navigation" class="nav_menu_link">navigation</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">visitor policies</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="#" class="nav_menu_link">visitor services</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <style>
+                            .nav_menu_item button {
+                                background-color: #235464;
+                                border: 1px solid white;
+                                padding: 5px 50px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+
+                            @media screen and (max-width:1150px) and (min-width:769px) {
+                                .nav_menu_list .nav_menu_item {
+                                    margin: 0 1rem;
+                                }
+                            }
+
+                            @media screen and (min-width: 768px) and (max-width: 991px) {
+                                .nav_menu_item .nav_menu_link {
+                                    font-size: 10px;
+                                    line-height: 0px;
+
+                                }
+
+                            }
+                        </style>
+                        <button>
+                            <a href="#" class="nav_menu_link">Sign In</a>
+                        </button>
+                        <!-- <a href="#" class="nav_menu_link">visitor services</a> -->
+                    </li>
+                </ul>
+            </div>
+
+            <button class="toggle_btn" id="toggle_btn">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+    <style>
+        #aboutmain {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #235464;
+        }
+
+        #aboutmainleft {
+            width: 50%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        #aboutmainright {
+            width: 50%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            #aboutmain {
+                display: block;
+            }
+
+            #aboutmainleft {
+                width: 100%;
+
+                /* background-color: #000;*/
+            }
+
+            #aboutmainright {
+                width: 100%;
+                height: auto;
+
+                /*background-color: #ff22fe;*/
+            }
+        }
+
+        #aboutmainleft h1 {
+            font-size: 3rem;
+            color: #ff22fe;
+        }
+
+        #aboutmainleft h3 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        #aboutmainleft p {
+            font-size: 1.5rem;
+            color: white;
+            margin-top: 30px;
+        }
+
+        #aboutmainleft ul {
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+
+        #aboutmainleft ul li {
+            list-style: circle;
+            color: #0386ff;
+        }
+
+        #aboutmainleft ul li a {
+            color: #0386ff;
+        }
+    </style>
+    <div id="aboutmain">
+        <div id="aboutmainleft">
+            <h1>Visitor Services</h1>
+            <h3>Importance of Visiting Patients</h3>
+            <p>
+                Visiting loved ones in the hospital is not just a gesture
+                of care. It plays a crucial role in their recovery journey.
+                The emotional support and connection provided by family and friends can significantly uplift
+                the spirits of patients.
+            </p>
+            <ul>
+                <li><a href="">
+                        Cards & Flowers
+                    </a></li>
+                <li><a href="">
+                        Food
+                    </a></li>
+                <li><a href="">
+                        WiFi Use
+
+                    </a></li>
+                <li><a href="">
+                        Overnight Accommodations
+
+                    </a></li>
+                <li><a href="">
+
+                        Parking
+                    </a></li>
+            </ul>
+        </div>
+        <div id="aboutmainright">
+            <img src="./img/about us pic.png" alt="" />
+        </div>
+    </div>
+    <style>
+        #aboutinfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: #ff22fe;*/
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        #findway {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            padding: 20px;
+            border: 2px solid #ff22fe;
+            flex-direction: column;
+            background-color: #0b222c;
+            margin-top: 30px;
+        }
+
+        #findway h1 {
+            font-size: 34px;
+            color: #ff22fe;
+        }
+
+        #findway p {
+            font-size: 1.5rem;
+            color: #ffff;
+            margin-top: 30px;
+        }
+
+        #findway ul,ol,
+        #findway span,
+        #findway div {
+            font-size: 1.5rem;
+            color: #ffff;
+        }
+
+        #findway ul li {
+            list-style: circle;
+            margin-left: 20px;
+        }
+        ol li{
+            list-style: decimal;
+            margin-left: 20px;
+        }
+    </style>
+
+    <div id="aboutinfo">
+        <div id="findway">
+            <h1>Cards & Flowers </h1>
+            <p>
+                Sending a patient a card, flowers or a gift can often make them feel better and make their time in the
+                hospital seem to go by faster. The Hospital gift shop takes phone orders.
+                To place an order, please call <span style="color:#0386ff">012-345-6789</span>.
+                To find out where a patient is located, please call <span style="color:#0386ff">012-345-6789</span>.
+                Please be sure to include the patient’s name and room number.
+            </p>
+        </div>
+        <div id="findway">
+            <h1>WiFi Use</h1>
+            <p>
+                Free, public wireless Internet access is available in all all floors of the hospital facilities.
+                Through this network, you can use your laptop or mobile device to access the Internet from patients
+                hospital rooms, waiting areas, cafeterias and other locations.
+                <br>
+                <span style="font-weight: bolder;">Accessing WiFi :</span>
+            <ul>
+                <li>The wireless network is called "H-indicator-OOHS."</li>
+                <li>Start up your laptop or mobile device, and enter the address of any Web site.</li>
+                <li>You'll be redirected to a login page.</li>
+                <li>Enter your last name and e-mail address, and click “Accept.”</li>
+                <li>On the next page, click "Continue".</li>
+            </ul>
+            <br>
+
+
+            <span style="font-weight: bolder;">Access Note :</span>
+            <ul>
+                <li>WiFi connections made through the "guest" network are not secure.</li>
+                <li>The faculty and staff may not use the network to access secure areas of the health system's Web
+                    site.</li>
+                <li>The free WiFi service does not provide access to certain inappropriate Web sites, using the Web
+                    filtering software that meets industry standards.</li>
+                <li>The hospital does not provide technical support for this service, and is not responsible for
+                    computers and devices that are lost, damaged or stolen.</li>
+
+            </ul>
+            <br>
+            <span style="font-weight: bolder;">Note to Patients:</span>
+
+            <div>Please do not use the network while you are in an outpatient exam room, or when a member of your health
+                care team visits your inpatient room.</div>
+            </p>
+        </div>
+        <div id="findway">
+            <h1>
+                Food</h1>
+
+            <p>
+                Enjoy a variety of fresh and nourishing meal options at our cafeteria. We strive to provide a comforting
+                dining experience for visitors.
+                Discover a diverse array of culinary delights at our hospital and the surrounding area, offering an
+                exquisite selection of food, snacks, and coffee options for your comfort and enjoyment.
+                For a comprehensive list of dining options within the hospital premises and local vicinity, please refer
+                to our dedicated culinary guide available in the patient rooms.
+                <span style="font-weight: bolder;">Ordering:</span>
+            <ul>
+                <li>To place an order, simply dial the provided extension in your patient room. Our dedicated staff will
+                    assist you with menu choices, dietary preferences, and any special request.</li>
+            </ul>
+            </p>
+        </div>
+        <div id="findway">
+            <h1>Overnight-stay</h1>
+            <p>
+                Our overnight accommodations are designed with your comfort in mind, providing a home-like environment
+                that allows you to be in close proximity to your hospitalized family members. Here's what you can expect
+                from our overnight stay options:
+                
+            <ol>
+                <li><span style="font-weight: bolder;">
+                    Convenient Location:  </span>Located within the hospital vicinity, our accommodations are strategically placed to minimize travel time, ensuring you can swiftly reach your loved one's side whenever needed.</li>
+                <li><span style="font-weight: bolder;">Secure Access: </span>Your safety and security are our top priorities. Rest assured that our accommodations have secure access measures in place, providing you with peace of mind during your stay.</li>
+                <li><span style="font-weight: bolder;">Booking and Inquiries: </span> To inquire about availability or make a reservation, please contact our dedicated accommodations desk at 012-345-6789. Our friendly staff will assist you with the booking process and address any questions you may have.</li>
+               
+
+            </ol><div>
+
+                During challenging times, being close to your loved ones can be a source of strength and solace. Our overnight accommodations aim to provide a supportive space for you to rest and recharge, ensuring you can be there for your family members throughout their healing journey. Your comfort is our priority.
+
+            </div>
+            </p>
+        </div>
+        <div id="findway">
+            <h1>Parking</h1>
+            <p>
+                we understand the importance of hassle-free parking, ensuring your visit is as smooth as possible. Our parking facilities are designed with your comfort and convenience in mind.
+                <br>
+                <span style="font-weight: bolder;">
+                    Parking Charges:
+                </span>
+                <br>
+                The parking charges:
+            <ul>
+                <li>Hourly Rate: ₹200</li>
+                <li>Daily Rate: ₹1500</li>
+                
+            </ul>
+         
+            </p>
+        </div>
+
+    </div>
+
+    <!-- <footer></footer> -->
+
+    <style>
+        .footer {
+            margin-top: 50px;
+
+            /*max-width: 1280px;*/
+            width: 100%;
+            background: #ff22fe;
+            border-radius: 6px;
+        }
+
+        .footer .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 3.5rem;
+            padding: 60px;
+        }
+
+        .footer-row .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .footer-col .links {
+            margin-top: 20px;
+        }
+
+        .footer-col .links li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-col .links li a {
+            text-decoration: none;
+            color: #ffff;
+        }
+
+        .footer-col .links li a:hover {
+            color: #fff;
+        }
+
+        .footer-col p {
+            margin: 20px 0;
+            color: #fff;
+            max-width: 300px;
+        }
+
+        .footer-col form {
+            display: flex;
+            gap: 5px;
+        }
+
+        .footer-col input {
+            height: 40px;
+            border-radius: 6px;
+            background: none;
+            width: 100%;
+            outline: none;
+            border: 1px solid #7489c6;
+            caret-color: #fff;
+            color: #fff;
+            padding-left: 10px;
+        }
+
+        .footer-col input::placeholder {
+            color: #ccc;
+        }
+
+        .footer-col form button {
+            background: #fff;
+            outline: none;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.2s ease;
+        }
+
+        .footer-col form button:hover {
+            background: #cecccc;
+        }
+
+        .footer-col .icons {
+            display: flex;
+            margin-top: 30px;
+            gap: 30px;
+            cursor: pointer;
+        }
+
+        .footer-col .icons i {
+            color: #afb6c7;
+        }
+
+        .footer-col .icons i:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                transform: none;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .footer .footer-row {
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .footer-col form {
+                display: block;
+            }
+
+            .footer-col form :where(input, button) {
+                width: 100%;
+            }
+
+            .footer-col form button {
+                margin: 10px 0 0 0;
+            }
+        }
+    </style>
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <!-- <h4>Info</h4> -->
+                <img src="./img/Frame 40133.png" alt="" />
+                <ul class="links">
+                    <p>Leading the Way in Medical Execellence, Trusted Care.</p>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul class="links">
+                    <li><a href="#">Appointments</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <!-- <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Media Kit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose of news, updates,
+                    helpful tips, and exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required />
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./landingpage.js" defer></script>
+</body>
+
+</html>
