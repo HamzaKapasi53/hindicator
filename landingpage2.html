@@ -39,21 +39,21 @@
 
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">about</a>
+              <a href="./aboutpage.html" class="nav_menu_link">about</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#navigation" class="nav_menu_link">navigation</a>
+              <a href="landingpage2.html#navigation" class="nav_menu_link">navigation</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">visitor policies</a>
+              <a href="./visitorpolicypage.html" class="nav_menu_link">visitor policies</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">visitor services</a>
+              <a href="./visitorservicepage.html" class="nav_menu_link">visitor services</a>
             </li>
             <li class="nav_menu_item">
               <style>
                 .nav_menu_item button {
-                  background-color: #235464;
+                  /*background-color: #235464;*/
                   border: 1px solid white;
                   padding: 5px 50px;
                   border-radius: 5px;
@@ -224,7 +224,7 @@ font-size: 20px;
             justify-content: space-between;
          
             align-items: center;
-            background-color: #235464;
+           /* background-color: #235464;*/
             color: white;
             height: 100vh; /* Set height to cover the full viewport height */
             width: 100%;
@@ -247,6 +247,8 @@ font-size: 20px;
 
         #navigationright {
             width: 50%;
+            padding: 50px 20px; /* Adjusted padding for smaller screens */
+
         }
 
         #navigationright img {
@@ -322,7 +324,7 @@ font-size: 20px;
      flex-wrap: wrap;
       justify-content: center;
       margin-top: 20px;
-      width: 90%;
+      width: 85%;
       background-color: #0b222c;
     }
     /*#innerservices {
@@ -415,7 +417,7 @@ font-size: 20px;
      flex-wrap: wrap;
       justify-content: center;
       margin-top: 20px;
-      width: 90%;
+      width: 85%;
       background-color: #0b222c;
     }
     /*#innerservices {
@@ -446,10 +448,10 @@ font-size: 20px;
 #inneravailabletests {
  /* 33.33%*/
   flex: 0 0 calc(25% - 20px); /* Set width for each card */
-  height: 150px; /* Set height as needed */
+  height: 250px; /* Set height as needed */
   margin: 10px; /* Adjust margin as needed */
   background-color: #414141;
-  border-radius: 10px;
+  border-radius:20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,7 +511,7 @@ font-size: 20px;
      flex-wrap: wrap;
       justify-content: center;
       margin-top: 20px;
-      width: 90%;
+      width: 85%;
       background-color: #0b222c;
     }
     /*#innerservices {
@@ -548,7 +550,19 @@ font-size: 20px;
   justify-content: center;
   align-items: center;
 }
-
+#listget {
+  /* 33.33%*/
+   flex: 0 0 calc(100% - 20px); /* Set width for each card */
+   height: 50px; /* Set height as needed */
+   margin: 10px; /* Adjust margin as needed */
+   background-color: #bfd2f8;
+ 
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   color: #1f2b6c;
+ }
+ 
 /* Media query for smaller screen sizes */
 @media screen and (max-width: 768px) {
   #innergetintouch {
@@ -560,13 +574,15 @@ font-size: 20px;
 @media screen and (max-width: 576px) {
   #innergetintouch {
     flex-basis: calc(100% - 20px); /* One card per row */
+    display: none;
   }
+
 }
   </style>
   <div id="getintouch">
     <h1 >Get In Touch</h1>
 
-    <div id="availabletests_info">
+    <div id="getintouch_info">
      <!-- <div id="innerservices"></div> -->
      <div id="innergetintouch"><img src="./img/Group 77.png" alt=""></div>
      <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
@@ -575,7 +591,12 @@ font-size: 20px;
      <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
      <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
      <!-- <div id="innerservices"></div> -->
+<div id="listget">
+<span>Emergency</span>
+  (237) 681-812-255 <br>(237) 681-812-255
+  <img src="./img/Group 188.png" alt="">
 
+</div>
     </div>
   </div>
     <!-- <footer></footer> -->

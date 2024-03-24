@@ -34,9 +34,11 @@ html{
 /* ==== RESET HTML ==== */
 body {
   width: 100%;
-  height: 100vh;
+  
   overflow-x: hidden;
-  background-color: #235464;
+  /* background-color: #235464; */
+  background-image: linear-gradient(to bottom, #0f2027, #203a43 ,#2c5364);
+/* #0f2027 #203a43 #2c5364 */
 }
 ul li {
   list-style-type: none;
