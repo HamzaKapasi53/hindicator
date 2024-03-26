@@ -322,7 +322,7 @@ font-size: 20px;
       display: flex;
 
      flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-evenly;
       margin-top: 20px;
       width: 85%;
       background-color: #0b222c;
@@ -387,7 +387,7 @@ font-size: 20px;
      <div id="innerservices"><img src="./img/Dentistrs.png" alt=""></div>
      <div id="innerservices"><img src="./img/Otology.png" alt=""></div>
      <div id="innerservices"><img src="./img/optimology.png" alt=""></div>
-     <div id="innerservices"><img src="./img/map.png" alt=""></div>
+     <!-- <div id="innerservices"><img src="./img/map.png" alt=""></div> -->
      <!-- <div id="innerservices"></div> -->
 
     </div>
@@ -470,6 +470,9 @@ font-size: 20px;
     flex-basis: calc(100% - 20px); /* One card per row */
   }
 }
+#availabletests_info img{
+  width: 50%;
+}
   </style>
   <div id="availabletests">
     <h1 >Available Test</h1>
@@ -477,11 +480,11 @@ font-size: 20px;
     <div id="availabletests_info">
      <!-- <div id="innerservices"></div> -->
      <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
-     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
-     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
-     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
-     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
-     <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 401.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 402.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 403.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 404.png" alt=""></div>
+     <div id="inneravailabletests"><img src="./img/Group 405.png" alt=""></div>
      <!-- <div id="innerservices"></div> -->
 
     </div>
@@ -552,15 +555,18 @@ font-size: 20px;
 }
 #listget {
   /* 33.33%*/
-   flex: 0 0 calc(100% - 20px); /* Set width for each card */
+   flex: 0 0 calc(110% - 20px); /* Set width for each card */
    height: 50px; /* Set height as needed */
    margin: 10px; /* Adjust margin as needed */
    background-color: #bfd2f8;
  
    display: flex;
-   justify-content:space-around;
+   /*justify-content:space-around;*/
+   justify-content:space-between;
+   padding: 15px;
    align-items: center;
    color: #1f2b6c;
+   display: none;
  }
  
 /* Media query for smaller screen sizes */
@@ -570,13 +576,36 @@ font-size: 20px;
   }
 }
 
+@media screen and (max-width: 980px) and (min-width: 750px){
+#innergetintouch {
+    flex-basis: calc(50% - 20px); /* Two cards per row */
+  
+  
+}
+#inneravailabletests{
+  flex-basis: calc(33.33% - 20px); /* Two cards per row */
+
+}
+}
 /* Media query for even smaller screen sizes */
 @media screen and (max-width: 576px) {
   #innergetintouch {
     flex-basis: calc(100% - 20px); /* One card per row */
     display: none;
   }
+  #getintouch_info{
+    background: none;
+  }
+  #listget{
+    display: flex;
+  }
 
+}
+@media screen and (max-width: 450px) {
+  #listget{
+    font-size: 12px;
+    height: auto;
+  }
 }
   </style>
   <div id="getintouch">
@@ -585,16 +614,56 @@ font-size: 20px;
     <div id="getintouch_info">
      <!-- <div id="innerservices"></div> -->
      <div id="innergetintouch"><img src="./img/Group 77.png" alt=""></div>
-     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
-     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
-     <div id="innergetintouch"><img src="./img/Group 9.png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 77 (1).png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 77 (2).png" alt=""></div>
+     <div id="innergetintouch"><img src="./img/Group 77 (3).png" alt=""></div>
      <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
      <!-- <div id="inneravailabletests"><img src="./img/Group 9.png" alt=""></div> -->
      <!-- <div id="innerservices"></div> -->
 <div id="listget">
-<span>Emergency</span>
-  (237) 681-812-255 <br>(237) 681-812-255
-  <img src="./img/Group 188.png" alt="">
+  <div id="listleft" style="display:flex;align-items:center;">
+    <img src="./img/Group 188.png" alt="">
+    &nbsp; &nbsp; Emergency
+  </div>
+  <div id="listright">
+    (237) 681-812-255 <br>(237) 681-812-255
+
+  </div>
+
+
+</div>
+<div id="listget">
+  <div id="listleft" style="display:flex;align-items:center;">
+    <img src="./img/Group 178.png" alt="">
+    &nbsp; &nbsp; Location
+  </div>
+  <div id="listright">
+    213 Some Place <br>134 Some Country
+
+  </div>
+
+
+</div><div id="listget">
+  <div id="listleft" style="display:flex;align-items:center;">
+    <img src="./img/Group 202.png" alt="">
+    &nbsp; &nbsp; Email
+  </div>
+  <div id="listright">
+    hindicator@gmail.com <br>hindicator@gmail.com
+
+  </div>
+
+
+</div><div id="listget">
+  <div id="listleft" style="display:flex;align-items:center;">
+    <img src="./img/Group 177.png" alt="">
+    &nbsp; &nbsp; Working Hours
+  </div>
+  <div id="listright">
+    Mon-Sat: 9AM to 12AM <br>Sunday: Emergency Only
+
+  </div>
+
 
 </div>
     </div>
@@ -607,7 +676,8 @@ font-size: 20px;
 
         /*max-width: 1280px;*/
         width: 100%;
-        background: #ff22fe;
+  background-image: linear-gradient(to right, #ff22fe, #9733ee );
+        
         border-radius: 6px;
       }
       .footer .footer-row {

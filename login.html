@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #loginpage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #loginleft {
+        width: 35%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      #buttons button {
+        margin: 20px;
+        width: 164px;
+        height: 53px;
+        border-radius: 50px;
+        border: none;
+      }
+      #buttons button:nth-child(1) {
+        background-color: #9b9b9b;
+        color: #ffffff;
+      }
+      #buttons button:nth-child(2) {
+        background-color: #0e77ff;
+        color: #ffffff;
+      }
+      #form {
+        /*align-items: center;*/
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+      }
+      form #submit {
+        font-weight: bolder;
+        width: 410px;
+        height: 50px;
+        background-image: linear-gradient(to right, #ff22fe, #9733ee);
+
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+      }
+      #signup {
+        width: 410px;
+        margin-top: 10px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #ff22fe;
+        border-radius: 8px;
+        color:black;
+        font-weight: bolder;
+      }
+      input {
+        width: 410px;
+        height: 50px;
+        border-radius: 8px;
+        /* border: none;
+           border-bottom: 1px solid #000000;*/
+      }
+      .icon {
+        padding-left: 25px;
+        background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+        background-size: 20px;
+      }
+
+        .icon1{
+         background-image: url("./img/Rectangle 10.png") !important;
+    background-repeat: no-repeat;
+  /*  background-size: 30px;*/
+    background-position: 100% center;
+    
+    cursor: auto;
+
+        }
+        .icon2{
+            background-image: url("./img/Rectangle 10.png") !important;
+    background-repeat: no-repeat;
+    /*  background-size: 30px;*/
+    background-position: 100% center;
+    cursor: auto;
+        }
+      #loginright {
+        width: 65%;
+        height: 100%;
+        background-image: linear-gradient(to right, #ff22fe, #9733ee);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <div id="loginpage">
+      <div id="loginleft">
+        <img src="./img/h indicator logo.png" alt="" />
+        <h1>Login into your account</h1>
+        <div id="buttons"><button>Doctor</button><button>User</button></div>
+        <form action="/doctor_or_user" method="post">
+              <div id="form">
+            <label for="email">Email Address</label>
+            <input type="text" class="icon1" name="email" placeholder="alex@gmail.com" />
+            <br />
+            <label for="password">Password</label>
+            <input type="password" class="icon2" name="password" placeholder="Password" />
+            <br />
+            <button type="submit" id="submit">Login</button>
+            <div style="display: flex;justify-content:flex-end;margin-top:10px">
+                <a href="" style="text-decoration: none;">Forgot Password ?</a>
+              
+            </div>
+        </div>
+          </form>
+    <img src="./img/Group 5.png" alt="">
+         
+   <button id="signup">Sign Up</button>
+      </div>
+      <div id="loginright">
+        <img src="./img/Artboard 1 1.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
