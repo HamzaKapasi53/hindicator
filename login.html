@@ -112,6 +112,47 @@
         justify-content: center;
         align-items: center;
       }
+      @media screen and (max-width:1250px) and (min-width: 451px) {
+        body{
+          background-image: linear-gradient(to right, #ff22fe, #9733ee);
+        }
+        #loginright{
+          display: none;
+        }
+        #loginleft{
+          width:auto;
+          height: auto;
+          padding: 30px 10px;
+        }
+        #loginleft input ,form #submit,#signup{
+          width: 300px;
+        }
+      }
+      @media  screen and (max-width: 450px){
+        body{
+          background-image: linear-gradient(to right, #ff22fe, #9733ee);
+        }
+        #loginright{
+          display: none;
+        }
+        #loginleft{
+          width:auto;
+          height: auto;
+          padding: 10px 10px;
+        }
+        #form{
+          width: 100%;
+          align-items: center;
+        }
+        #loginleft input ,form #submit,#signup{
+        /*  width: 80%;
+         */
+         width: 300px;
+        }
+        #buttons button{
+          width: 100px;
+        }
+      }
     </style>
     <div id="loginpage">
       <div id="loginleft">
@@ -133,7 +174,7 @@
             </div>
         </div>
           </form>
-    <img src="./img/Group 5.png" alt="">
+    <img src="./img/Group 5.png" style="width:100%">
          
    <button id="signup">Sign Up</button>
       </div>
